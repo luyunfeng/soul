@@ -21,7 +21,7 @@
         <module>soul-dependencies</module>
         <module>soul-example</module>
         <module>soul-common</module>
-        <module>soul-id-generator</module>
+        <module>soul-unique-id</module>
     </modules>
     <properties>
         <!-- Dependency Versions -->
@@ -31,6 +31,8 @@
         <javax-servlet-api>3.0</javax-servlet-api>
         <slf4j-api.version>1.7.25</slf4j-api.version>
         <guava.version>27.0-jre</guava.version>
+        <jmh.version>1.21</jmh.version>
+
 
         <!-- Maven Plugin Versions -->
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
@@ -56,11 +58,22 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+            </dependency>
+            <!-- JMH-->
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-core</artifactId>
+                <version>${jmh.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-generator-annprocess</artifactId>
+                <version>${jmh.version}</version>
+                <scope>provided</scope>
             </dependency>
 
 

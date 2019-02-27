@@ -16,4 +16,10 @@
     </modules>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>tech.soulcoder</groupId>
+            <artifactId>soul-unique-id</artifactId>
+        </dependency>
+    </dependencies>
 </project>

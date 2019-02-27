@@ -17,6 +17,20 @@
     <packaging>pom</packaging>
     <description>Spring Cloud Soul Dependencies</description>
 
+    <properties>
+        <!-- Own dependencies  -->
+        <unique-id.version>1.0-SNAPSHOT</unique-id.version>
+    </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>tech.soulcoder</groupId>
+                <artifactId>soul-unique-id</artifactId>
+                <version>${unique-id.version}</version>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
 
 </project>
