@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>soul-springboot</module>
+        <module>soul-test</module>
     </modules>
 
 

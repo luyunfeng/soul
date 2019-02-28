@@ -1,4 +1,4 @@
-package tech.soulcoder.uniqueId;
+package tech.soulcoder.test;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
@@ -7,22 +7,12 @@ import java.util.concurrent.ThreadPoolExecutor.AbortPolicy;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.openjdk.jmh.annotations.Benchmark;
-import org.openjdk.jmh.annotations.BenchmarkMode;
-import org.openjdk.jmh.annotations.Mode;
-import org.openjdk.jmh.annotations.OutputTimeUnit;
-import org.openjdk.jmh.annotations.Threads;
-import org.openjdk.jmh.runner.Runner;
-import org.openjdk.jmh.runner.options.Options;
-import org.openjdk.jmh.runner.options.OptionsBuilder;
-
 /**
  * @author yunfeng.lu
- * @create 2019/2/27.
+ * @create 2019/2/28.
  */
-@OutputTimeUnit(TimeUnit.MICROSECONDS)
-@BenchmarkMode(Mode.AverageTime)
 public class BaseTest {
+
     public static final ThreadPoolExecutor EXECUTOR =
         new ThreadPoolExecutor(15, 15, 10000L, TimeUnit.MILLISECONDS,
             new LinkedBlockingQueue<>(), new ThreadFactory() {
@@ -46,19 +36,5 @@ public class BaseTest {
 
     static {
         Runtime.getRuntime().addShutdownHook(new Thread(EXECUTOR::shutdown));
-    }
-
-    public static void main(String[] args) throws Exception {
-        Options options = new OptionsBuilder().
-            include(BaseTest.class.getName()).forks(1).build();
-        new Runner(options).run();
-
-
-    }
-
-    @Benchmark
-    @Threads(10)
-    public void run0() {
-        UUIDCreator.generate();
     }
 }

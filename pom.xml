@@ -129,7 +129,7 @@
                         <format>xml</format>
                     </formats>
                     <check/>
-                    <check />
+                    <check/>
                 </configuration>
                 <executions>
                     <execution>
