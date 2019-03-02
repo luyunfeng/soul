@@ -56,7 +56,7 @@ public class LogAopImp {
         logger.info("Pointcut");
     }
 
-    @Before("logAopAspect() &&  ")
+    @Before("logAopAspect()")
     public void fun(){
         logger.info("Before");
 
