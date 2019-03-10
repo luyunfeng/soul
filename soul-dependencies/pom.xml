@@ -19,7 +19,7 @@
 
     <properties>
         <!-- Own dependencies  -->
-        <unique-id.version>1.0-SNAPSHOT</unique-id.version>
+        <soul.version>1.0-SNAPSHOT</soul.version>
     </properties>
 
     <dependencyManagement>
@@ -27,10 +27,14 @@
             <dependency>
                 <groupId>tech.soulcoder</groupId>
                 <artifactId>soul-unique-id</artifactId>
-                <version>${unique-id.version}</version>
+                <version>${soul.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.soulcoder</groupId>
+                <artifactId>soul-common</artifactId>
+                <version>${soul.version}</version>
             </dependency>
         </dependencies>
-
     </dependencyManagement>
 
 </project>
