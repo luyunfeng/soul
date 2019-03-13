@@ -1,3 +1,5 @@
+[toc]
+
 # soul
 
 ## soul-common
