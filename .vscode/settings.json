@@ -1,8 +1,0 @@
-{
-    "pasteImageToQiniu.access_key": "fApxYsa19ZSLx6JJgezzqi6VuY7GR00Ku0jnnQuz",
-    "pasteImageToQiniu.bucket": "fengyun",
-    "pasteImageToQiniu.localPath": "/Users/lucode/Documents/qiniu/",
-    "pasteImageToQiniu.remotePath": "${dateTime}",
-    "pasteImageToQiniu.domain": "http://po6i7clbi.bkt.clouddn.com",
-    "pasteImageToQiniu.secret_key": "L4RJjcqqAd31TzIKJzSBIVwuxdSQz8LPDexgKtia"
-}
