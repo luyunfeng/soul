@@ -1,34 +1,40 @@
 
 [TOC]
-
-- [soul](#soul)
-  - [soul-common](#soul-common)
-  - [soul-dependencies](#soul-dependencies)
-  - [soul-example](#soul-example)
-    - [soul-learn](#soul-learn)
-    - [soul-springboot](#soul-springboot)
-    - [soul-test](#soul-test)
-  - [soul-unique-id](#soul-unique-id)
+- [🌈soul](#%F0%9F%8C%88soul)
+  - [🗽soul-blog](#%F0%9F%97%BDsoul-blog)
+  - [🍩soul-common](#%F0%9F%8D%A9soul-common)
+  - [🌎soul-dependencies](#%F0%9F%8C%8Esoul-dependencies)
+  - [🍄soul-example](#%F0%9F%8D%84soul-example)
+    - [🌏soul-learn](#%F0%9F%8C%8Fsoul-learn)
+    - [🌵soul-springboot](#%F0%9F%8C%B5soul-springboot)
+    - [🌍soul-test](#%F0%9F%8C%8Dsoul-test)
+  - [😇soul-unique-id](#%F0%9F%98%87soul-unique-id)
     - [方案一](#%E6%96%B9%E6%A1%88%E4%B8%80)
-# soul
 
-## soul-common
+# 🌈soul
+玩具项目，记录各种学习
+
+## 🗽soul-blog
+
+博客文章
+
+## 🍩soul-common
 
 基本共用的方法集合
 
-## soul-dependencies
+## 🌎soul-dependencies
 
 用来自定义模块的管理项目依赖关系
 
-## soul-example
-存在一些例子和启动类方法
-### soul-learn
+## 🍄soul-example
+样例
+### 🌏soul-learn
 
-### soul-springboot
+### 🌵soul-springboot
 
-### soul-test
+### 🌍soul-test
 
-## soul-unique-id
+## 😇soul-unique-id
 
 唯一 Id 生成器
 
