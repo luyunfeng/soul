@@ -1,5 +1,18 @@
 [toc]
-
+- [Spring支持的几种bean的作用域](#spring%E6%94%AF%E6%8C%81%E7%9A%84%E5%87%A0%E7%A7%8Dbean%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F)
+- [Spring Bean 加载顺序](#spring-bean-%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F)
+- [Spring框架中bean的生命周期](#spring%E6%A1%86%E6%9E%B6%E4%B8%ADbean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F)
+  - [生命周期相关的方法](#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%B9%E6%B3%95)
+  - [Bean在创建的过程顺序](#bean%E5%9C%A8%E5%88%9B%E5%BB%BA%E7%9A%84%E8%BF%87%E7%A8%8B%E9%A1%BA%E5%BA%8F)
+  - [Bean在销毁的过程顺序](#bean%E5%9C%A8%E9%94%80%E6%AF%81%E7%9A%84%E8%BF%87%E7%A8%8B%E9%A1%BA%E5%BA%8F)
+  - [整体顺序代码示例](#%E6%95%B4%E4%BD%93%E9%A1%BA%E5%BA%8F%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B)
+- [自动装配](#%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D)
+  - [@Bean](#bean)
+  - [xml配置文件中使用autowire](#xml%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8autowire)
+  - [@Autowire](#autowire)
+  - [@Qualifier](#qualifier)
+  - [@Resource](#resource)
+- [参考资料](#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
 # Spring支持的几种bean的作用域
 
 缺省的Spring bean 的作用域是Singleton. 
