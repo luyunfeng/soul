@@ -1,4 +1,4 @@
-package tech.soulcoder.client.domain;
+package tech.soulcoder.product.domain;
 
 import java.io.Serializable;
 

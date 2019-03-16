@@ -17,5 +17,6 @@
         <module>soul-learn</module>
         <module>soul-eureka-server</module>
         <module>soul-eureka-product-service</module>
+        <module>soul-eureka-order-service</module>
     </modules>
 </project>

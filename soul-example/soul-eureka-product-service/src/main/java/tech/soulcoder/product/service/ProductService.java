@@ -1,8 +1,8 @@
-package tech.soulcoder.client.service;
+package tech.soulcoder.product.service;
 
 
 
-import tech.soulcoder.client.domain.Product;
+import tech.soulcoder.product.domain.Product;
 
 import java.util.List;
 

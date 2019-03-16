@@ -1,4 +1,4 @@
-package tech.soulcoder.client;
+package tech.soulcoder.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @desc Eureka客户端入口
  */
 @SpringBootApplication
-public class EurekaServiceApplication {
+public class EurekaProductServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServiceApplication.class, args);
+        SpringApplication.run(EurekaProductServiceApplication.class, args);
     }
 }
