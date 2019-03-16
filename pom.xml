@@ -8,7 +8,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.7.RELEASE</version>
+        <version>2.0.3.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>tech.soulcoder</groupId>
@@ -18,7 +19,6 @@
     <description>Spring Cloud Soul</description>
 
     <modules>
-        <module>soul-dependencies</module>
         <module>soul-example</module>
         <module>soul-common</module>
         <module>soul-unique-id</module>
@@ -27,12 +27,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Dependency Versions -->
         <java.version>1.8</java.version>
+        <soul.version>1.0-SNAPSHOT</soul.version>
         <spring-cloud-dependencies.version>Finchley.SR2</spring-cloud-dependencies.version>
+        <soul-dependencies.version>1.0-SNAPSHOT</soul-dependencies.version>
         <junit.version>4.12</junit.version>
         <javax-servlet-api>3.0</javax-servlet-api>
         <slf4j-api.version>1.7.25</slf4j-api.version>
         <guava.version>27.0-jre</guava.version>
         <jmh.version>1.21</jmh.version>
+
         <!-- Maven Plugin Versions -->
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
@@ -43,13 +46,6 @@
     </properties>
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>tech.soulcoder</groupId>
-                <artifactId>soul-dependencies</artifactId>
-                <version>${project.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -74,8 +70,16 @@
                 <version>${jmh.version}</version>
                 <scope>provided</scope>
             </dependency>
-
-
+            <dependency>
+                <groupId>tech.soulcoder</groupId>
+                <artifactId>soul-unique-id</artifactId>
+                <version>${soul.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.soulcoder</groupId>
+                <artifactId>soul-common</artifactId>
+                <version>${soul.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
