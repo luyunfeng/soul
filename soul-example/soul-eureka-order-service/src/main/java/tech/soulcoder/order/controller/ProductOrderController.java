@@ -20,13 +20,15 @@ public class ProductOrderController {
 
     @HystrixCommand(fallbackMethod = "saveOrderFail")
     @RequestMapping("save")
-    public Object save(@RequestParam("user_id")int userId, @RequestParam("product_id") int productId){
+    public Object save(@RequestParam("user_id") int userId, @RequestParam("product_id") int productId) {
 
         return productOrderService.save(userId, productId);
     }
 
-    //注意，方法签名一定要要和api方法一致
-    private Object saveOrderFail(int userId, int productId){
+    /**
+     * 注意，方法签名一定要要和api方法一致
+     */
+    private Object saveOrderFail(int userId, int productId) {
         Map<String, Object> msg = new HashMap<>();
         msg.put("code", -1);
         msg.put("msg", "抢购人数太多，您被挤出来了，稍等重试");
