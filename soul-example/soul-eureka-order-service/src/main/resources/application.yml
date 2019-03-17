@@ -15,10 +15,37 @@ eureka:
 product-service:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
-#全局修改调用超时时间
+#feign的全局修改调用超时时间
 feign:
   client:
     config:
       default:
         connectTimeout: 2000
         readTimeout: 2000
+#全局开启feign的hystrix
+  hystrix:
+    enabled: true
+
+#hystrix的超时时间禁用
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        timeout:
+#          enabled: false
+
+#设置超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
+
+#暴露全部的监控信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
