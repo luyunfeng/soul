@@ -51,9 +51,6 @@ public class UUIDCreator {
      */
     private static AtomicLong AUTO_INCREMENT_ID = new AtomicLong(MIN_ID_CONTAINER_SIZE);
 
-    /**
-     *
-     */
     private static String IP_TAG;
 
     private static String create() {

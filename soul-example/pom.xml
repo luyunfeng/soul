@@ -18,4 +18,10 @@
         <module>soul-eureka-server</module>
         <module>soul-eureka-product-service</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>tech.soulcoder</groupId>
+            <artifactId>soul-unique-id</artifactId>
+        </dependency>
+    </dependencies>
 </project>
