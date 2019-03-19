@@ -37,6 +37,7 @@
 分析一个消息队列主要从这几个点出来。
 在后半部分主要分析了 kafka 对以上几点的保证。
 # 关于消息队列的几个问题
+
 ```
 为什么用RocketMQ或者是Kafka？技术选型的依据是什么？
 
@@ -67,7 +68,8 @@
 你们用的是RocketMQ？RocketMQ很大的一个特点是对分布式事务的支持，你说说他在分布式事务支持这块机制的底层原理？
 
 如果让你来动手实现一个分布式消息中间件，整体架构你会如何设计实现？
-``` 
+```
+
 # 为什么使用消息队列？
 ![image.png](https://upload-images.jianshu.io/upload_images/4031250-78958ef5cbb472f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
