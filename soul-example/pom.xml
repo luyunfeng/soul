@@ -18,5 +18,6 @@
         <module>soul-eureka-server</module>
         <module>soul-eureka-product-service</module>
         <module>soul-eureka-order-service</module>
+        <module>soul-zuul</module>
     </modules>
 </project>
