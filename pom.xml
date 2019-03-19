@@ -70,6 +70,8 @@
                 <version>${jmh.version}</version>
                 <scope>provided</scope>
             </dependency>
+
+            <!--本项目依赖描述-->
             <dependency>
                 <groupId>tech.soulcoder</groupId>
                 <artifactId>soul-unique-id</artifactId>

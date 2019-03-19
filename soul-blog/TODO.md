@@ -1,13 +1,13 @@
 
 分布式事务   
-缓存       
+缓存  
 分布式锁  redlock     
 JVM  
 Spring  
 Java 基础 (极客时间)   
 基本算法和数据结构  
 mysql   
-
+分布式共识算法(注册中心的一些机制)
 
 系列学习
 https://mp.weixin.qq.com/mp/homepage?__biz=MzIxMTE0ODU5NQ==&hid=7&sn=0be331e80ba76f3ef22931bed0a14bb8
