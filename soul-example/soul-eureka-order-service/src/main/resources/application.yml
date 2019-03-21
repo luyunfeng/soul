@@ -4,6 +4,12 @@ spring:
   application:
     # 指定注册到eureka server上的服务名称，对于商品微服务，本系列将名称设为 order-service
     name: order-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      # 采样率，模式0.1，也就是10%，为了便于观察效果，改为1.0，也就是100%。生产环境建议保持默认。
+      probability: 1.0
 eureka:
   client:
     service-url:

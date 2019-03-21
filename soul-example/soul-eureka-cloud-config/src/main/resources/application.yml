@@ -1,0 +1,24 @@
+#服务名称
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:ruanzhi/cloud-config
+          username: ruanzhi
+          password:
+          timeout: 5
+          default-label: master
+
+#服务的端口号
+server:
+  port: 9100
+
+
+#指定注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

@@ -2,6 +2,8 @@ package tech.soulcoder.order.service.impl;
 
 
 import com.fasterxml.jackson.databind.JsonNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -20,8 +22,7 @@ import java.util.UUID;
 
 @Service
 public class ProductOrderServiceImpl implements ProductOrderService {
-
-
+    private Logger logger= LoggerFactory.getLogger(getClass());
     @Autowired
     private RestTemplate restTemplate;//利用ribbon方式 底层httpclient发送一个请求
     @Autowired
@@ -30,7 +31,7 @@ public class ProductOrderServiceImpl implements ProductOrderService {
 
     @Override
     public ProductOrder save(int userId, int productId) {
-
+        logger.info("productOrder service save");
         //Map<String,Object> productMap = restTemplate.getForObject("http://product-service/api/v1/product/find?id="+productId, Map.class);
         String result = productClient.findById(productId);
         JsonNode jsonNode = JsonUtils.str2JsonNode(result);
