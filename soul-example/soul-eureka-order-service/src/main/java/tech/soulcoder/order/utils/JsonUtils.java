@@ -11,7 +11,7 @@ import java.io.IOException;
 public class JsonUtils {
 
 
-    private static final ObjectMapper objectMappper = new ObjectMapper();
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
 
     /**
@@ -19,7 +19,7 @@ public class JsonUtils {
      */
     public static JsonNode str2JsonNode(String str){
         try {
-            return  objectMappper.readTree(str);
+            return  objectMapper.readTree(str);
         } catch (IOException e) {
             return null;
         }
