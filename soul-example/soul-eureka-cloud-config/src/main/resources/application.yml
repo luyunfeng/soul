@@ -16,7 +16,6 @@ spring:
 server:
   port: 9100
 
-
 #指定注册中心地址
 eureka:
   client:
