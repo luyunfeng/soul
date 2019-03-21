@@ -23,16 +23,19 @@ import java.util.UUID;
 @Service
 public class ProductOrderServiceImpl implements ProductOrderService {
     private Logger logger= LoggerFactory.getLogger(getClass());
+
     @Autowired
     private RestTemplate restTemplate;//利用ribbon方式 底层httpclient发送一个请求
     @Autowired
     private ProductClient productClient;//利用feign方式
 
-
     @Override
     public ProductOrder save(int userId, int productId) {
         logger.info("productOrder service save");
         //Map<String,Object> productMap = restTemplate.getForObject("http://product-service/api/v1/product/find?id="+productId, Map.class);
+
+        ///Map<String,Object> productMap = restTemplate.getForObject
+        // ("http://product-service/api/v1/product/find?id="+productId, Map.class);
         String result = productClient.findById(productId);
         JsonNode jsonNode = JsonUtils.str2JsonNode(result);
         ProductOrder productOrder = new ProductOrder();
