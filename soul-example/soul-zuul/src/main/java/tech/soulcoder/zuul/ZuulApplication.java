@@ -1,7 +1,9 @@
-package tech.soulcoder.client;
+package tech.soulcoder.zuul;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+
 
 /**
  * @author as
@@ -9,8 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @desc Eureka客户端入口
  */
 @SpringBootApplication
-public class EurekaServiceApplication {
+@EnableZuulProxy
+public class ZuulApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServiceApplication.class, args);
+        SpringApplication.run(ZuulApplication.class, args);
     }
+
 }

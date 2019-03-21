@@ -1,0 +1,18 @@
+server:
+  port: 8740
+spring:
+  application:
+    name: gateway-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#自定义路由映射 http://localhost:8740/order-service/api/v1/product/order/save?user_id=1&product_id=4
+zuul:
+  routes:
+    order-service: /apigateway/**
+    product-service: /apigateway/**
+  #统一入口为上面的配置，其他入口忽略
+  ignored-patterns: /*-service/**
+  #忽略整个服务，对外提供接口
+  #ignored-services: product-service

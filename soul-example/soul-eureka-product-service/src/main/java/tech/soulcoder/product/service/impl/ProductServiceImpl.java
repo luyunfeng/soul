@@ -1,8 +1,8 @@
-package tech.soulcoder.client.service.impl;
+package tech.soulcoder.product.service.impl;
 
 import org.springframework.stereotype.Service;
-import tech.soulcoder.client.domain.Product;
-import tech.soulcoder.client.service.ProductService;
+import tech.soulcoder.product.domain.Product;
+import tech.soulcoder.product.service.ProductService;
 
 import java.util.*;
 

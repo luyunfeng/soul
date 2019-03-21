@@ -5,11 +5,13 @@ eureka:
   instance:
     hostname: localhost
   client:
-  #声明自己是个服务端
+    # 是否要注册到其他Eureka Server实例
     registerWithEureka: false
+    # 是否要从其他Eureka Server实例获取数据
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
-#  server:
-#    enable-self-preservation: false
+  #server:
+  #界面自我保护提示信息显示
+  #  enable-self-preservation: false
