@@ -36,7 +36,8 @@
 
 ## 😇soul-unique-id
 
-唯一 Id 生成器
+唯一 Id 生成器 
+原生snowflake 进行整合的
 
 ### 方案一
 特点：
