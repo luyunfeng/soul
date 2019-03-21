@@ -5,12 +5,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import sun.net.www.URLConnection;
-import sun.net.www.http.HttpClient;
 import tech.soulcoder.order.domain.ProductOrder;
 import tech.soulcoder.order.service.ProductClient;
 import tech.soulcoder.order.service.ProductOrderService;
@@ -33,9 +29,6 @@ public class ProductOrderServiceImpl implements ProductOrderService {
     public ProductOrder save(int userId, int productId) {
         logger.info("productOrder service save");
         //Map<String,Object> productMap = restTemplate.getForObject("http://product-service/api/v1/product/find?id="+productId, Map.class);
-
-        ///Map<String,Object> productMap = restTemplate.getForObject
-        // ("http://product-service/api/v1/product/find?id="+productId, Map.class);
         String result = productClient.findById(productId);
         JsonNode jsonNode = JsonUtils.str2JsonNode(result);
         ProductOrder productOrder = new ProductOrder();
