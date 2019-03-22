@@ -135,6 +135,16 @@ public class SnowflakeIdWorker {
         this.workerId = workerId;
         this.datacenterId = datacenterId;
     }
+
+    /**
+     * 系统默认构造器实例
+     */
+    public static class InstanceHolder {
+        public static final SnowflakeIdWorker instance =
+            new SnowflakeIdWorker(0, 0);
+
+    }
+
     // ==============================Methods==========================================
 
     /**
