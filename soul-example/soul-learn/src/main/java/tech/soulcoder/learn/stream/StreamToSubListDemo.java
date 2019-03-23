@@ -5,10 +5,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * 使用 stream 去切割数组
  * @author yunfeng.lu
  * @create 2019/3/20.
  */
-public class StreamApiDemo {
+public class StreamToSubListDemo {
 
     public static void main(String[] args) {
         List<String> testList = new ArrayList<>();
