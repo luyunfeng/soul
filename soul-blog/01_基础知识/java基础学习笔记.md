@@ -1,4 +1,3 @@
-
 - [String、StringBufer、StringBuilder](#stringstringbuferstringbuilder)
   - [字符串的内部数组](#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%86%85%E9%83%A8%E6%95%B0%E7%BB%84)
   - [字符串拼接](#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5)
