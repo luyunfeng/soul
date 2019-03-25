@@ -21,4 +21,10 @@
         <module>soul-zuul</module>
         <module>soul-eureka-cloud-config</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>tech.soulcoder</groupId>
+            <artifactId>soul-unique-id</artifactId>
+        </dependency>
+    </dependencies>
 </project>

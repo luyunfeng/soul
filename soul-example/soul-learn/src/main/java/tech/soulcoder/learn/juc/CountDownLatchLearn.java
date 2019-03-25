@@ -1,7 +1,7 @@
 package tech.soulcoder.learn.juc;
 
 import com.google.common.collect.Maps;
-import tech.soulcoder.uniqueId.UUIDCreator;
+import tech.soulcoder.uniqueId.simple.UUIDCreator;
 
 import java.util.Map;
 import java.util.concurrent.*;

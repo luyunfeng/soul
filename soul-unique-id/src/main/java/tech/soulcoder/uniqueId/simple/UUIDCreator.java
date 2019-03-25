@@ -1,4 +1,4 @@
-package tech.soulcoder.uniqueId;
+package tech.soulcoder.uniqueId.simple;
 
 import java.net.InetAddress;
 import java.time.LocalDateTime;
@@ -51,9 +51,6 @@ public class UUIDCreator {
      */
     private static AtomicLong AUTO_INCREMENT_ID = new AtomicLong(MIN_ID_CONTAINER_SIZE);
 
-    /**
-     *
-     */
     private static String IP_TAG;
 
     private static String create() {
@@ -64,7 +61,6 @@ public class UUIDCreator {
     }
 
     public static String generate() {
-
         return appId + DATE_TIME_FORMATTER.format(LocalDateTime.now()) + IP_TAG + create();
     }
 
