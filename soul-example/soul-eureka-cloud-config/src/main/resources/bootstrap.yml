@@ -2,8 +2,12 @@
 spring:
   application:
     name: config-server
+  #指定从哪个配置中心读取
   cloud:
     config:
+      discovery:
+        service-id: CONFIG-SERVER
+        enabled: true
       server:
         git:
           uri: git@github.com:ruanzhi/cloud-config
@@ -11,11 +15,6 @@ spring:
           password:
           timeout: 5
           default-label: master
-
-#服务的端口号
-server:
-  port: 9100
-
 #指定注册中心地址
 eureka:
   client:
