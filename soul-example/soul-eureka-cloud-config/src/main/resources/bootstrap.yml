@@ -5,14 +5,11 @@ spring:
   #指定从哪个配置中心读取
   cloud:
     config:
-      discovery:
-        service-id: CONFIG-SERVER
-        enabled: true
       server:
         git:
           uri: git@github.com:ruanzhi/cloud-config
           username: ruanzhi
-          password:
+          password: Rz1655362684
           timeout: 5
           default-label: master
 #指定注册中心地址
