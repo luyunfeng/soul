@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import com.google.common.collect.Maps;
 import org.junit.Test;
-import tech.soulcoder.uniqueId.UUIDCreator;
+import tech.soulcoder.uniqueId.simple.UUIDCreator;
 
 /**
  * @author yunfeng.lu
