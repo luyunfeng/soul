@@ -22,6 +22,7 @@
     - [树化](#%E6%A0%91%E5%8C%96)
     - [【补充】如何解决 hash 冲突](#%E8%A1%A5%E5%85%85%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3-hash-%E5%86%B2%E7%AA%81)
 - [线程安全的集合类（JUC）](#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E9%9B%86%E5%90%88%E7%B1%BBjuc)
+  - [ConcurrentHashMap](#concurrenthashmap)
 - [IO](#io)
   - [基本概念](#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
     - [操作系统一般分为```内核空间```和```用户空间```](#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%80%E8%88%AC%E5%88%86%E4%B8%BA%E5%86%85%E6%A0%B8%E7%A9%BA%E9%97%B4%E5%92%8C%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4)
@@ -174,6 +175,61 @@ HashMap是一个lazy-load原则，就是在创建对象的时候不会去初始�
 > ```建立公共溢出区```这种方法的基本思想是：将哈希表分为基本表和溢出表两部分，凡是和基本表发生冲突的元素，一律填入溢出表。
 
 # 线程安全的集合类（JUC）
+## ConcurrentHashMap
+这个是1.7 的数据结构
+![2019326124649](http://po6i7clbi.bkt.clouddn.com/2019326124649.png)
+
+![2019326124814](http://po6i7clbi.bkt.clouddn.com/2019326124814.png)
+
+在1.8版本以前，ConcurrentHashMap采用分段锁的概念，使锁更加细化，但是1.8已经改变了这种思路，而是利用CAS+Synchronized来保证并发更新的安全，当然底层采用数组+链表+红黑树的存储结构。
+
+* [详细分析的博客](https://www.jianshu.com/p/e694f1e868ec)
+
+* [1.8 源码解析](http://cmsblogs.com/?p=2283)
+
+> 重要概念
+
+* table：用来存放Node节点数据的，默认为null，默认大小为16的数组，每次扩容时大小总是2的幂次方；
+
+* nextTable：扩容时新生成的数据，数组为table的两倍；
+
+* Node：节点，保存key-value的数据结构；
+
+* ForwardingNode：一个特殊的Node节点，hash值为-1，其中存储nextTable的引用。只有table发生扩容的时候，ForwardingNode才会发挥作用，作为一个占位符放在table中表示当前节点为null或则已经被移动
+
+* sizeCtl：控制标识符，用来控制table初始化和扩容操作的，在不同的地方有不同的用途，其值也不同，所代表的含义也不同
+```
+负数代表正在进行初始化或扩容操作
+-1代表正在初始化
+-N 表示有N-1个线程正在进行扩容操作
+正数或0代表hash表还没有被初始化，这个数值表示初始化或下一次进行扩容的大小
+```
+
+> 重要内部类
+
+* Node
+作为ConcurrentHashMap中最核心、最重要的内部类，Node担负着重要角色：key-value键值对。所有插入ConCurrentHashMap的中数据都将会包装在Node中
+
+区别去普通的HashMap 他的 Node 很多字段都是采用了volatile
+```
+volatile V val; //带有volatile，保证可见性
+volatile Node<K,V> next;//下一个节点的指针
+```
+> TreeNode
+
+在ConcurrentHashMap中，如果链表的数据过长是会转换为红黑树来处理。当它并不是直接转换，而是将这些链表的节点包装成TreeNode放在TreeBin对象中，然后由TreeBin完成红黑树的转换。
+
+> TreeBin
+
+该类并不负责key-value的键值对包装，它用于在链表转换为红黑树时包装TreeNode节点，也就是说ConcurrentHashMap红黑树存放是TreeBin，不是TreeNode。该类封装了一系列的方法，包括putTreeVal、lookRoot、UNlookRoot、remove、balanceInsetion、balanceDeletion。
+
+
+> ConcurrentHashMap的初始化
+
+ConcurrentHashMap的初始化主要由initTable()方法实现，在上面的构造函数中我们可以看到，其实ConcurrentHashMap在构造函数中并没有做什么事，仅仅只是设置了一些参数而已。其真正的初始化是发生在插入的时候，例如put、merge、compute、computeIfAbsent、computeIfPresent操作时。
+
+
+
 
 
 # IO
