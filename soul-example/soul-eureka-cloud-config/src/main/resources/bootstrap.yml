@@ -9,7 +9,7 @@ spring:
         git:
           uri: git@github.com:ruanzhi/cloud-config
           username: ruanzhi
-          password: Rz1655362684
+          password:
           timeout: 5
           default-label: master
 #指定注册中心地址
