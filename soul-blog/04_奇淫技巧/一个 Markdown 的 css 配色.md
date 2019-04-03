@@ -1,6 +1,6 @@
 自定义配色网站的 markdown 网站
 
-[地址](http://md.aclickall.com/)
+[网站地址](http://md.aclickall.com/)
 
 ```
 .output_wrapper/*此属性为全局*/
