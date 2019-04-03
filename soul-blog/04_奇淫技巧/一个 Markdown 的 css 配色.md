@@ -100,7 +100,7 @@ li{  /*在公众号下，改变不了li符号的属性（如颜色），并会�
 pre code /*代码块*/
 {           
      font-family: Consolas, Inconsolata, Courier, monospace;
-    border-radius: 0px;
+     border-radius: 0px;
 }
 blockquote { /*引用块*/
   display: block;
@@ -294,3 +294,84 @@ a[href^="#"] sup
 {/*每级目录的缩进*/
   margin-left:25px;
 }
+/*
+Date: 24 Fev 2015
+Author: Pedro Oliveira <kanytu@gmail . com>
+*/
+
+
+.hljs {
+  color: #a9b7c6;
+  background: #282b2e;
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+}
+
+.hljs-params
+{
+  color: #ff9823;
+}
+.hljs-number,
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet {
+  color: #AE87FA;
+}
+
+.hljs-function,
+.hljs-built_in,
+.hljs-name,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-deletion {
+  color: #f82375;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link {
+  color: #629755;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #808080;
+}
+
+.hljs-meta {
+  color: #5bdaed;
+}
+
+.hljs-string,
+.hljs-attribute,
+.hljs-addition {
+  color: #eedc70;
+}
+
+.hljs-attr,
+.hljs-section,
+.hljs-title,
+.hljs-type {
+  color: #a5da2d;
+}
+
+.hljs-selector-class
+{
+   color: #a5da2d;
+}
+
+.hljs-name,
+.hljs-selector-id,
+{ 
+  color: #f92672;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+```
