@@ -1,9 +1,15 @@
-server:
-  port: 8771
 spring:
   application:
     # 指定注册到eureka server上的服务名称，对于商品微服务，本系列将名称设为 product-service
     name: product-service
+  #指定从哪个配置中心读取
+  cloud:
+    config:
+      discovery:
+        service-id: CONFIG-SERVER
+        enabled: true
+      #建议用lable去区分环境，默认是lable是master分支
+      #label: test
 eureka:
   client:
     service-url:

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: gateway-zuul
+  #指定从哪个配置中心读取
+  cloud:
+    config:
+      discovery:
+        service-id: CONFIG-SERVER
+        enabled: true
+      #建议用lable去区分环境，默认是lable是master分支
+      #label: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+

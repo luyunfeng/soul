@@ -1,5 +1,7 @@
 package tech.soulcoder.product.service.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import tech.soulcoder.product.domain.Product;
 import tech.soulcoder.product.service.ProductService;
@@ -8,7 +10,7 @@ import java.util.*;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-
+    private Logger logger= LoggerFactory.getLogger(getClass());
     private static final Map<Integer,Product> daoMap = new HashMap<>();
 
     static {
@@ -44,6 +46,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product findById(int id) {
+        logger.info("product service findById");
         return daoMap.get(id);
     }
 }

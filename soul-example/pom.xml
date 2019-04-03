@@ -18,12 +18,7 @@
         <module>soul-eureka-server</module>
         <module>soul-eureka-product-service</module>
         <module>soul-eureka-order-service</module>
-        <module>soul-zuul</module>
+        <module>soul-eureka-zuul</module>
+        <module>soul-eureka-cloud-config</module>
     </modules>
-    <dependencies>
-        <dependency>
-            <groupId>tech.soulcoder</groupId>
-            <artifactId>soul-unique-id</artifactId>
-        </dependency>
-    </dependencies>
 </project>
