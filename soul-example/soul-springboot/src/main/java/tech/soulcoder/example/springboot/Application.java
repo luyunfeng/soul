@@ -9,8 +9,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import tech.soulcoder.kit.logger.LogAop;
-import tech.soulcoder.kit.logger.LogAopImp;
 
 /**
  * @author yunfeng.lu
@@ -27,7 +25,6 @@ public class Application {
     }
 
     @GetMapping("/baseController/{param}")
-    @LogAop
     public String baseController(@PathVariable("param") String param) {
         try {
             Thread.sleep(3000);

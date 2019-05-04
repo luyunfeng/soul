@@ -21,4 +21,22 @@
         <module>soul-eureka-zuul</module>
         <module>soul-eureka-cloud-config</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>tech.soulcoder</groupId>
+            <artifactId>soul-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>tech.soulcoder</groupId>
+            <artifactId>soul-unique-id</artifactId>
+        </dependency>
+    </dependencies>
 </project>
