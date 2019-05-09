@@ -28,19 +28,9 @@ public class ClusterDemo {
         // soTimeOut(相当于socketTimeOue)：等待服务器返回数据的超时时间
         JedisCluster jedisCluster = new JedisCluster(hostAndPortsSet,
             20000, 20000, 10, new JedisPoolConfig());
-        jedisCluster.set("a","ssss");
-        // 旧版本的jedis cluster不支持设置密码
-        // 剩余操作同redis
-        System.out.println(jedisCluster.get("a"));
-        //System.out.println(jedisCluster.get("b"));
-        //System.out.println(jedisCluster.get("c"));
-    }
-    public static void main2(String[] args) {
-        Jedis jedis = new Jedis("redis",7000);
-        // 旧版本的jedis cluster不支持设置密码
-        // 剩余操作同redis
-        System.out.println(jedis.get("www"));
-        //System.out.println(jedisCluster.get("b"));
-        //System.out.println(jedisCluster.get("c"));
+        for (int i = 0; i < 1000000; i++) {
+            jedisCluster.set("a" + i, "test" + i);
+        }
+
     }
 }
