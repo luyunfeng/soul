@@ -20,6 +20,7 @@
         <module>soul-eureka-order-service</module>
         <module>soul-eureka-zuul</module>
         <module>soul-eureka-cloud-config</module>
+        <module>soul-thrift</module>
     </modules>
     <dependencies>
         <dependency>
